@@ -866,3 +866,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 13px;
   color: #ccc;
 }
+
+#video{
+  text-align: center;
+}
+
+#mailto_subject{
+  text-align: center;
+}
