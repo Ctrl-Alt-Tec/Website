@@ -775,6 +775,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 18px;
   margin: 0 2px;
 }
+#mailto_subject *{
+  display: inline-block;
+}
 
 /* Contact Section
 --------------------------------*/
