@@ -881,8 +881,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Catalog Section
 ---------------------- */
 .shirt_item{
-	height: 160px;
-	width: 160px;
+	height: 240px;
+	width: 240px;
 	border-radius: 16px;
 	background-color: rgba(160,160,160,0.5);
 	margin: 16px;
@@ -895,5 +895,5 @@ body.mobile-nav-active #mobile-nav-toggle {
 	background-color: rgba(255,255,255,0.5);
 	border: 2px solid rgb(0,122,255);
 	background-size: 90%;
-	transform: scale(2,2);
+	transform: scale(1.5);
 }
