@@ -25,58 +25,6 @@
   <link href="css/style.css" rel="stylesheet">
 
 
-	<script>
-		var tshirtsArray = [
-			'10 BINARY.png' ,
-			'2B OR NOT 2B.png' ,
-			'404 LIFE NOT FOUND.png' ,
-			'BLUE SCREEN OF DEATH.png' ,
-			'BREAK WEAK SWITCH.png' ,
-			'CMD QUIT I QUIT.png' ,
-			'COFFE INTO MAGIC.png' ,
-			'CTRL ALT TEC 0 CLUB.png' ,
-			'CTRL ALT TEC AWESOME.png' ,
-			'DO NOT PUSH ME IM A DEVELOPER.png' ,
-			'!FALSE TRUE.png' ,
-			'GIMME A BR.png' ,
-			'GIRLS CODE TOO.png' ,
-			'GIT BEST FEELING EVER.png' ,
-			'HIP HIP ARRAY.png' ,
-			'IB PROCRASTINATE SLEEP CRY.png' ,
-			'I CODE SUPERPOWER.png' ,
-			'IMPORT FROM CTRL ALT TEC.png' ,
-			'INCREDIBLES ++.png' ,
-			'index.txt' ,
-			'JAVA PROGRAMMERS WEAR GLASSES.png' ,
-			'JAVASCRIPT SUCKS.png' ,
-			'MACINTOSH HELLO.png' ,
-			'MADE U2665.png' ,
-			'QR CODE NO PICTURES.png' ,
-			'RETURN HELLO WORLD.png' ,
-			'SECONDS SINCE UTC.png' ,
-			'SEMICOLON HIDE AND SEEK.png' ,
-			'SHIRT SIZE MEDIUM COLOR BLACK.png' ,
-			'SQL SHIRT.png' ,
-			'SWITCH I NEED A BREAK.png' ,
-			'TERMINAL DONT TELL ME WHAT TO DO.png' ,
-			'THERE IS NO PLACE LIKE 127 0 0 1.png' ,
-			'THIS IS A PROMISE.png' ,
-			'WE ARE ONE.png' ,
-			'WORLDS 0 PROGRAMMER.png' ,
-			'YOU ARE THE HTML TO MY CSS.png' ,
-			'YOU CAN TALK TO ME.png' ,
-			'YUP, IM A MACHINE LEARNING.png'
-		];
-
-		$(function(){
-			$.each(tshirtsArray, function(l,i){
-				$("#shirstContainter").append('<img style="height: 240; width: 240; border-radius: 16; background: rgba(160,160,160,0.5)" src="shirts/'+i+'" />')
-			});
-			alert('this is a Test')
-		})
-
-	</script>
-
 </head>
 
 <body>
@@ -370,7 +318,7 @@
 	<!--==========================
 	STORE Section
 	============================-->
-	<section id="store" style="background-color: rgb(0,122,192); padding-top: 16px">
+	<section id="store" style="padding-top: 16px">
     <div class="container wow fadeInUp">
 			<div class="row">
         <div class="col-md-12">
@@ -379,8 +327,7 @@
           <p class="section-description">Compra mercancía exclusiva de Ctrl Alt Tec</p>
         </div>
       </div>
-			<div class="row" style="display: flex; flex-direction: flex-row; justifyContent: space-around" id="shirstContainter">
-
+			<div class="row" style="display: flex; flex-direction: flex-row; justify-content: space-around; flex-wrap: wrap; padding: 16px" id="shirstContainter">
 			</div>
 		</div>
 	</section>
@@ -441,7 +388,7 @@
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- Required JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="lib/superfish/hoverIntent.js"></script>
   <script src="lib/superfish/superfish.min.js"></script>
@@ -454,6 +401,61 @@
   <script src="js/custom.js"></script>
 
   <script src="contactform/contactform.js"></script>
+
+
+		<script>
+			var tshirtsArray = [
+				'10 BINARY.png' ,
+				'2B OR NOT 2B.png' ,
+				'404 LIFE NOT FOUND.png' ,
+				'BLUE SCREEN OF DEATH.png' ,
+				'BREAK WEAK SWITCH.png' ,
+				'CMD QUIT I QUIT.png' ,
+				'COFFE INTO MAGIC.png' ,
+				'CTRL ALT TEC 0 CLUB.png' ,
+				'CTRL ALT TEC AWESOME.png' ,
+				'DO NOT PUSH ME IM A DEVELOPER.png' ,
+				'!FALSE TRUE.png' ,
+				'GIMME A BR.png' ,
+				'GIRLS CODE TOO.png' ,
+				'GIT BEST FEELING EVER.png' ,
+				'HIP HIP ARRAY.png' ,
+				'IB PROCRASTINATE SLEEP CRY.png' ,
+				'I CODE SUPERPOWER.png' ,
+				'IMPORT FROM CTRL ALT TEC.png' ,
+				'INCREDIBLES ++.png' ,
+				'index.txt' ,
+				'JAVA PROGRAMMERS WEAR GLASSES.png' ,
+				'JAVASCRIPT SUCKS.png' ,
+				'MACINTOSH HELLO.png' ,
+				'MADE U2665.png' ,
+				'QR CODE NO PICTURES.png' ,
+				'RETURN HELLO WORLD.png' ,
+				'SECONDS SINCE UTC.png' ,
+				'SEMICOLON HIDE AND SEEK.png' ,
+				'SHIRT SIZE MEDIUM COLOR BLACK.png' ,
+				'SQL SHIRT.png' ,
+				'SWITCH I NEED A BREAK.png' ,
+				'TERMINAL DONT TELL ME WHAT TO DO.png' ,
+				'THERE IS NO PLACE LIKE 127 0 0 1.png' ,
+				'THIS IS A PROMISE.png' ,
+				'WE ARE ONE.png' ,
+				'WORLDS 0 PROGRAMMER.png' ,
+				'YOU ARE THE HTML TO MY CSS.png' ,
+				'YOU CAN TALK TO ME.png' ,
+				'YUP, IM A MACHINE LEARNING.png'
+			];
+
+			$(function(){
+				$.each(tshirtsArray, function(l,i){
+					$("#shirstContainter").append($('<div class="shirt_item">').css({
+						'background-image': 'url("shirts/'+i+'")',
+					}))
+				});
+				//alert('this is a Test')
+			})
+
+		</script>
 
 
 </body>

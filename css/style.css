@@ -877,3 +877,23 @@ body.mobile-nav-active #mobile-nav-toggle {
 #mailto_subject{
   text-align: center;
 }
+
+/* Catalog Section
+---------------------- */
+.shirt_item{
+	height: 160px;
+	width: 160px;
+	border-radius: 16px;
+	background-color: rgba(160,160,160,0.5);
+	margin: 16px;
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.shirt_item:hover{
+	background-color: rgba(255,255,255,0.5);
+	border: 2px solid rgb(0,122,255);
+	background-size: 90%;
+	transform: scale(2,2);
+}
