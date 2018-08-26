@@ -460,11 +460,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 .section-title {
   font-size: 32px;
-  color: #333;
+  color: #888;
   padding-top: 8px;
   text-transform: uppercase;
   text-align: center;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .section-description {
