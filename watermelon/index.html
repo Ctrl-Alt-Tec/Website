@@ -3,31 +3,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyCTC5VTiUENrzDSVstB5ex98BxCDP9tMB4",
-        authDomain: "kiwi-d38bd.firebaseapp.com",
-        databaseURL: "https://kiwi-d38bd.firebaseio.com",
-        projectId: "kiwi-d38bd",
-        storageBucket: "kiwi-d38bd.appspot.com",
-        messagingSenderId: "296898111291"
-      };
-      firebase.initializeApp(config);
-            
-      function generateUID() {
-        // I generate the UID from two parts here 
-        // to ensure the random number provide enough bits.
-        var firstPart = (Math.random() * 46656) | 0;
-        var secondPart = (Math.random() * 46656) | 0;
-        firstPart = ("000" + firstPart.toString(36)).slice(-3);
-        secondPart = ("000" + secondPart.toString(36)).slice(-3);
-        return firstPart + secondPart;
-      }
-      
-      
-      
-    </script>
     <style>
       *{
         margin: 0;
@@ -49,7 +24,7 @@
       body{
         padding: 0; 
         margin: 0;
-        background-color: rgba(160,160,160,0.2);
+        background-color: #DC3246;
         display: flex;
         flex-direction: column
       }
@@ -153,34 +128,10 @@
     <div class='header'>
       <div style="flex-wrap: wrap">
         <a href="http://ctrl-alt-tec.github.io/Website" style="margin-right: 8px"><img src='https://ctrl-alt-tec.github.io/Website/img/LOGO-INLINE.png' height="48px"/></a>
-        <img class="logo" src="logo_KIWI.png">
+        <img class="logo" src="logo.png">
       </div>
     </div>
     <div id= 'main' >
-      <div class='input-button-wrapper'>
-        <input type='file' id='file-upload'/>
-        <div class="input-button">SELECCIONAR ARCHIVO</div>
-      </div>
     </div>
-    <footer>
-       <img src="HechoConAmor.png" height="80px">
-    </footer>
-    <script>
-      document.getElementById("file-upload").addEventListener("change", function(e){
-            var file = e.target.files[0];
-            var fileUID = generateUID();
-            firebase.storage().ref(fileUID).put(file);
-            firebase.database().ref("files/"+fileUID).set({
-              NAME: fileUID,
-              DATE: new Date(),
-              PERMANENT: false
-            })
-            document.querySelector('#main').innerHTML = 
-              "<div class='confirmation-label'>ARCHIVO SUBIDO CON ÉXITO</div>"+
-              "<image id='qrcode' src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+fileUID+"'>"+
-              "<h2>"+fileUID+"</h2>"+
-              "<input type='button' value='OK!' class='input-button' onClick='window.location.reload(true)'/>"
-          })
-    </script>
   </body>
 </html>
