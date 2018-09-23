@@ -3,7 +3,7 @@
 		<script>
 			function load_home (event) {
     				(event || window.event).preventDefault();
-    				fetch("http://ctrl-alt-tec.github.io/Kiwi/index.html").then((html) => {
+    				fetch("https://ctrl-alt-tec.github.io/Kiwi/index.html").then((html) => {
         				document.getElementById("body").innerHTML = html.text();
     				}).catch((error) => {
         				console.warn(error);
