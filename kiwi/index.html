@@ -1,20 +1,12 @@
 <html>
 	<head>
 		<script>
-			function fetch_from_url (url) {
-			    return fetch(url).then((response) => (response.text()));
-			}
 			window.addEventListener('load', function(){
-    				//(event || window.event).preventDefault();
-    				fetch_from_url("https://ctrl-alt-tec.github.io/Kiwi/index.html").then((html) => {
-        				document.getElementById("body").innerHTML = html;
-    				}).catch((error) => {
-        				console.warn(error);
-    				});
+    				window.location.replace("https://ctrl-alt-tec.github.io/Kiwi/index.html")
 			})
 		</script>
 	</head>
-	<body id="body">
+	<body>
 	</body>
 </html>
 
