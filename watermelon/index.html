@@ -3,6 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <script src="https://apis.google.com/js/api.js"></script>
     <style>
       *{
         margin: 0;
@@ -24,7 +25,6 @@
       body{
         padding: 0; 
         margin: 0;
-        background-color: #DC3246;
         display: flex;
         flex-direction: column
       }
@@ -56,7 +56,7 @@
         align-content: center;
         position: sticky; 
         margin: 0;
-        background-color: rgba(255,255,255,0.5);
+        background-color: #DC3246;
         width: 100%;
         padding: 16px;
         font-family: 'Arial';
@@ -132,6 +132,27 @@
       </div>
     </div>
     <div id= 'main' >
+      1
     </div>
+
+    <script>
+        function start() {
+          // 2. Initialize the JavaScript client library.
+          gapi.client.init({
+            'apiKey': 'AIzaSyD-oZ2tn8ise1fwnPDSfuSVOkkK3OzxKSo',
+          }).then(function() {
+            // 3. Initialize and make the API request.
+            return gapi.client.request({
+              'path': 'https://people.googleapis.com/v1/people/me?requestMask.includeField=person.names',
+            })
+          }).then(function(response) {
+            console.log(response.result);
+          }, function(reason) {
+            console.log('Error: ' + reason.result.error.message);
+          });
+        };
+        // 1. Load the JavaScript client library.
+        gapi.load('client', start);
+    </script>
   </body>
 </html>
