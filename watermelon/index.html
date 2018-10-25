@@ -108,19 +108,10 @@
         margin: 16px;
         min-width: 150px
       }
-      #file-upload{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        opacity: 0;
-      }
-      .confirmation-label{
-        max-width: 150px;
-        font-family: 'Share Tech Mono', monospace;
-        font-size: 16px;
-        margin: 16px;
+      .section{
+	padding: 16px;
+	display: flex;
+	flex-direction: row;
       }
     </style>
   </head>
@@ -131,11 +122,15 @@
         <img class="logo" src="logo.png">
       </div>
     </div>
-    <div id= 'main' >
-      1
+    <div id='main' class='section'>
+      <h2>Today is</h2>
+      <h1 class='today-date'></h1>
     </div>
 
     <script>
+        var currentDate = new Date();
+        var monthsArray = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+	      document.querySelector(".today-date").innerHTML = currentDate.getMonth() + ", " + currentDate.getDate(); 
         function start() {
           // 2. Initialize the JavaScript client library.
           gapi.client.init({
