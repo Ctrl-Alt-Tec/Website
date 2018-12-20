@@ -184,13 +184,29 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #111;
-  padding: 20px 0;
-  height: 90px;
+  background: black !important;
+  padding: 0;
+}
+
+#header .container{
+  width: 100% !important; 
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 8px;
+}
+#header .container::before, #header .container::after{
+  display: none;
 }
 
 #header #logo {
-  float: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 8px;
 }
 
 #header #logo h1 {
@@ -211,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
 #header #logo img {
   padding: 0;
   margin: 0;
-  max-height: 50px;
+  max-height: 48px;
 }
 
 @media (max-width: 768px) {
@@ -233,6 +249,13 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+#nav-menu-container{
+  margin: 8px !important;
+  display: flex ;
+  float: none !important;
+  flex-direction: row;
+  align-items: center;
+}
 /* Nav Menu Essentials */
 .nav-menu, .nav-menu * {
   margin: 0;
@@ -303,12 +326,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Nav Meu Styling */
 .nav-menu a {
-  padding: 10px 15px;
+  padding: 8px;
   text-decoration: none;
   display: inline-block;
-  color: #fff;
+  color: white;
   font-family: 'Raleway', sans-serif;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 14px;
   outline: none;
 }
@@ -376,8 +399,8 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   z-index: 998;
   background: rgba(0, 0, 0, 0.9);
-  left: -260px;
-  width: 260px;
+  left: -100vw;
+  width: 100vw;
   overflow-y: auto;
   transition: 0.4s;
 }
@@ -396,12 +419,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   font-size: 16px;
   overflow: hidden;
-  padding: 10px 22px 10px 15px;
   position: relative;
   text-decoration: none;
   width: 100%;
   display: block;
   outline: none;
+  padding: 32px
 }
 
 #mobile-nav ul li a:hover {
