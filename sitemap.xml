@@ -9,7 +9,33 @@
 
 <url>
   <loc>https://ctrl-alt-tec.hackclub.com/</loc>
-  <lastmod>2018-12-18T02:48:17+00:00</lastmod>
+  <lastmod>2019-01-07T07:42:24+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://ctrl-alt-tec.hackclub.com/bank/index.html</loc>
+  <lastmod>2019-01-07T07:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ctrl-alt-tec.hackclub.com/lists/index.html</loc>
+  <lastmod>2019-01-07T07:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ctrl-alt-tec.hackclub.com/puzzle/index.html</loc>
+  <lastmod>2019-01-07T07:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ctrl-alt-tec.hackclub.com/kiwi/index.html</loc>
+  <lastmod>2019-01-07T07:42:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ctrl-alt-tec.hackclub.com/watermelon/index.html</loc>
+  <lastmod>2019-01-07T07:42:24+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 
