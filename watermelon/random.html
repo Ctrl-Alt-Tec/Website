@@ -1,0 +1,175 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <script src="https://apis.google.com/js/api.js"></script>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      #main{
+        overflow: auto;
+        padding-bottom: 100px;
+        padding-top: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        flex-grow: 1;
+        padding: 16px
+      }
+      body{
+        padding: 0; 
+        margin: 0;
+        display: flex;
+        flex-direction: column
+      }
+      h1{
+        font-family: 'Arial';
+        font-weight: 900;
+        font-size: 120px;
+      }
+      h2{ 
+        font-family: 'Share Tech Mono', monospace;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 48px;
+        color: black;
+      }
+      .logo{
+        height: 70px;
+      }
+      footer .logo{
+        margin-left: auto;
+        margin-right: auto;
+        height: 70px;
+      }
+  
+      .header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        position: sticky; 
+        margin: 0;
+        background-color: #2eddc7;
+        width: 100%;
+        padding: 16px;
+        font-family: 'Arial';
+        font-size: 16;
+        top: 0; 
+        box-sizing: border-box;
+        justify-content: space-between;
+      }
+      .header *{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between
+      }
+      /*.header * :hover{
+        background-color: rgba(160,160,160,0.5)
+      }*/
+      .sign-out{
+        padding: 24px
+      }
+      footer{
+        width: 100%;
+        display: flex; 
+        justify-content: center;
+        padding: 16px;
+        bottom: 0;
+        box-sizing: border-box
+      }
+      footer *{
+        display: flex;
+        text-align: center;
+        align-items:center;
+        justify-content: space-between
+      }
+      .input-button-wrapper{
+        overflow: hidden; 
+        position: relative
+      }
+      .input-button{
+        width: auto;
+        background-color: #84BB22;
+        border-radius: 16px;
+        padding: 16px;
+        font-size: 16px;
+        color: white;
+        font-weight: 600;
+        font-family: arial;
+        border: none;
+        margin: 16px;
+        min-width: 150px
+      }
+      .section{
+	padding: 16px;
+	display: flex;
+	flex-direction: row;
+      }
+      .input-text{
+        display: flex;
+        width: -webkit-fill-available;
+        -webkit-appearance: none;
+        font-family: 'Source Sans Pro', sans-serif;
+        padding: 8px;
+        border: none;
+        border-radius: 16px;
+        margin: 8px
+      }
+      .input-text:invalid{
+        background: rgb(240,240,240)
+      }
+      .input-text:not(.background-nohide):valid{
+        background: transparent;
+        padding: 8px 0px;
+        border-radius: 0px;
+        border-bottom: 2px solid rgb(200,200,200);
+      }
+      
+
+      .input-text.transparent{
+        background: transparent;
+        border: none;
+      }
+      .input-text:valid:focus{
+        border-bottom: 2px solid rgb(0,122,255);
+      }
+    </style>
+  </head>
+  <body>
+    <div class='header'>
+      <div style="flex-wrap: wrap">
+        <a href="http://ctrl-alt-tec.github.io/Website" style="margin-right: 8px"><img src='https://ctrl-alt-tec.github.io/Website/img/LOGO-INLINE.png' height="48px"/></a>
+        <img class="logo" src="logo.png">
+      </div>
+    </div>
+    <div id='main' class='section'>
+      <h1 class='today-date'></h1>
+    </div>
+    <div id='main' class='section' style="display: flex; flex-direction: row">
+      <input type="text" class="lower value" required="true" style="font-size: 32px;" placeholder="MIN">
+      <input type="text" class="upper value" required="true" style="font-size: 32px;" placeholder="MAX">
+    </div>
+
+    <script>
+        document.querySelectorAll(".value").forEach(function(item){
+          item.addEventListener("keydown", function(){
+          var upper = document.querySelector(".upper").value;
+          var lower = document.querySelector(".lower").value;
+          document.querySelector(".today-date").innerHTML = Math.round((Math.random() * upper + lower))
+        })
+        })
+        
+        
+        
+        
+    </script>
+  </body>
+</html>
