@@ -23,9 +23,8 @@
                 }
                 members[i] = member
             }
-
-
-            document.querySelector('body').innerText = data;
+            members.shift()
+            document.querySelector('body').innerText = JSON.stringify(members);
         })
     </script>
 </head>
