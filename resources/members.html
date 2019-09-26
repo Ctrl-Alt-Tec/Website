@@ -16,6 +16,13 @@
             for (let i = 0; i < members.length; i++) {
                 members[i] = members[i].split(',')
             }
+            for (let i = 1; i < members.length; i++) {
+                let member = {}
+                for(let j = 0; j < members[0].length; j++){
+                    member[ members[0][j] ] = members[i][j]
+                }
+                members[i] = member
+            }
 
 
             document.querySelector('body').innerText = data;
