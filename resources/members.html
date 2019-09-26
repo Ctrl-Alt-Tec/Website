@@ -7,11 +7,17 @@
     <title>Members</title>
     <script>
 
-        let membersCSV = ''
+        let members = [];
 
         fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vS4V1gKeiPuUiQKWhNCeUGsYKdssonqk6v5gvYOXcTQE1oXQYKdI3xeirSIOCmO2azmcqy29s5HHXNW/pub?gid=0&single=true&output=csv')
         .then(data=>data.text()).then(data=>{ 
-            membersCSV = data;
+            members = data.split('\n');
+            
+            for (let i = 0; i < members.length; i++) {
+                members[i] = members[i].split(',')
+            }
+
+
             document.querySelector('body').innerText = data;
         })
     </script>
