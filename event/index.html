@@ -10,6 +10,7 @@
         font-family: Arial, sans-serif;
         color: white;
         flex-direction: column;
+        background-size: cover;
       }
       img{
         width: 100px;
@@ -18,7 +19,13 @@
     </style>
   </head>
   <body>
-    <img src="https://ctrl-alt-tec.hackclub.com/img/logo-block.png">
-    <h1>Te podrás registrar a partir del viernes 27 de febrero</h1>
+    <script>
+      fetch('https://ctrl-alt-tec.hackclub.com/event/event.json').then(data=>data.json()).then(data=>{
+        document.body.style.background = `url('${data.image}')`;
+        setTimeout(()=>{
+          window.location.replace(data.url)
+        }, 100)
+      });
+    </script>
   </body>
 </html>
